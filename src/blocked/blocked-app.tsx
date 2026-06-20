@@ -57,7 +57,8 @@ export default function BlockedApp() {
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80" />
 
       <div className="animate-blocked-in relative z-10 flex w-full max-w-2xl flex-col items-center gap-4 rounded-3xl border border-white/10 bg-black/40 p-10 text-center text-white shadow-2xl backdrop-blur-md sm:p-12">
-        <span className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-white/80">
+        <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-white/80">
+          <img src="/shield.png" alt="" className="h-4 w-4" />
           BlockSite
         </span>
 
@@ -68,7 +69,8 @@ export default function BlockedApp() {
         </p>
 
         <p className="text-base leading-relaxed text-white/70">
-          Hãy cân nhắc thật kỹ xem có cần thiết không trước khi truy cập vào{" "}
+          Hãy cân nhắc thật kỹ xem có cần thiết không(Đọc "Vào {blockedDomain}{" "}
+          để làm gì 10 lần") trước khi truy cập vào{" "}
           <span className="font-semibold text-white/90">{blockedDomain}</span>{" "}
           nhé.
         </p>

@@ -54,7 +54,10 @@ export default function PopupApp() {
   return (
     <div className="flex w-80 flex-col gap-4 bg-white p-4 text-gray-900">
       <header className="flex items-center justify-between">
-        <h1 className="text-base font-semibold">BlockSite</h1>
+        <div className="flex items-center gap-2">
+          <img src="/shield.png" alt="BlockSite" className="h-6 w-6" />
+          <h1 className="text-base font-semibold">BlockSite</h1>
+        </div>
         <ToggleSwitch checked={config.isEnabled} onChange={handleToggle} />
       </header>
 
