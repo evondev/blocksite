@@ -1,0 +1,27 @@
+@import "tailwindcss";
+@import "@fontsource-variable/lexend";
+
+@theme {
+  --font-sans: "Lexend Variable", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+  }
+}
+
+@keyframes blocked-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-blocked-in {
+  animation: blocked-fade-in 0.5s ease-out both;
+}

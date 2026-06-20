@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "BlockSite",
+  "version": "0.1.0",
+  "description": "Chặn các domain gây xao nhãng và hiển thị trang nhắc nhở.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "BlockSite"
+  },
+  "background": {
+    "service_worker": "assets/background.js",
+    "type": "module"
+  },
+  "permissions": ["storage", "declarativeNetRequest"],
+  "host_permissions": ["<all_urls>"],
+  "web_accessible_resources": [
+    {
+      "resources": ["blocked.html", "assets/*", "backgrounds/*"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
