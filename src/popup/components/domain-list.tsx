@@ -3,14 +3,19 @@ import Button from "../../shared/components/button";
 interface DomainListProps {
   domains: string[];
   onRemove: (domain: string) => void;
+  emptyMessage: string;
+  removeLabelPrefix: string;
 }
 
-export function DomainList({ domains, onRemove }: DomainListProps) {
+export function DomainList({
+  domains,
+  onRemove,
+  emptyMessage,
+  removeLabelPrefix,
+}: DomainListProps) {
   if (domains.length === 0) {
     return (
-      <p className="py-4 text-center text-sm text-gray-400">
-        Chưa có domain nào bị chặn.
-      </p>
+      <p className="py-4 text-center text-sm text-gray-400">{emptyMessage}</p>
     );
   }
 
@@ -24,7 +29,7 @@ export function DomainList({ domains, onRemove }: DomainListProps) {
           <span className="truncate text-sm text-gray-800">{domain}</span>
           <Button
             variant="ghost"
-            aria-label={`Bỏ chặn ${domain}`}
+            aria-label={`${removeLabelPrefix} ${domain}`}
             onClick={() => onRemove(domain)}
           >
             ✕

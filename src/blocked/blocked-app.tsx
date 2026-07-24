@@ -69,8 +69,8 @@ export default function BlockedApp() {
         </p>
 
         <p className="text-base leading-relaxed text-white/70">
-          Hãy cân nhắc thật kỹ xem có cần thiết không(Đọc "Vào {blockedDomain}{" "}
-          để làm gì 10 lần") trước khi truy cập vào{" "}
+          Hãy cân nhắc thật kỹ xem có cần thiết không(Trả lời câu hỏi "Vào{" "}
+          {blockedDomain} để làm gì 10 lần") trước khi truy cập vào{" "}
           <span className="font-semibold text-white/90">{blockedDomain}</span>{" "}
           nhé.
         </p>

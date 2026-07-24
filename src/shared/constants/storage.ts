@@ -6,4 +6,5 @@ export const DEFAULT_CONFIG: BlockConfig = {
   username: "",
   isEnabled: true,
   blockedDomains: [],
+  allowedUrls: [],
 };

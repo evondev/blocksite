@@ -32,6 +32,22 @@ Sau khi sửa code, chạy lại `npm run build` rồi bấm nút **Reload** tr�
 - Thêm domain (ví dụ `facebook.com`) → chặn luôn cả `www.`, `m.`...
 - Bấm `✕` để bỏ chặn một domain.
 
+### URL ngoại lệ
+
+Chặn cả domain nhưng vẫn cần vào vài link cụ thể (ví dụ Messenger cho công
+việc) thì dán URL vào ô **Thêm URL ngoại lệ**.
+
+- Khớp theo **tiền tố**: thêm `facebook.com/messages` là mở khoá mọi cuộc trò
+  chuyện bên dưới; thêm nguyên link `facebook.com/messages/e2ee/t/8676347599136034`
+  thì chỉ mở đúng cuộc trò chuyện đó.
+- Tự bỏ `https://` và `www.`, khớp luôn subdomain — nên `facebook.com/messages`
+  cũng ăn `www.facebook.com/messages`.
+- Ngoại lệ luôn thắng rule chặn (priority cao hơn).
+
+Lưu ý: Facebook là SPA nên sau khi vào được link ngoại lệ, bấm chuyển trang bên
+trong app sẽ không tạo request mới → không bị chặn. Chỉ khi load lại nguyên
+trang ở URL ngoài phạm vi ngoại lệ mới bị chặn.
+
 ## Thêm ảnh nền cho trang chặn
 
 1. Thả ảnh vào `public/backgrounds/` (ví dụ `bg-1.jpg`).
